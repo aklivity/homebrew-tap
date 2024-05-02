@@ -38,9 +38,10 @@ class Zilla < Formula
 
     system "./zpmw", "install", "--debug"
 
-    libexec.install Dir["*"] + [".zpm"]
+    libexec.install Dir["zilla"] + [".zpm"] + [".zilla"]
     bin.install_symlink libexec/"zilla"
     bin.install_symlink libexec/".zpm"
+    bin.install_symlink libexec/".zilla"
   end
 
 end
