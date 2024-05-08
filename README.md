@@ -40,6 +40,22 @@ Tapped 1 formula (14 files, 28.4KB).
 ==> Running `brew cleanup zilla`...
 ```
 
+`zilla help`
+
+#### Expected Output
+```
+% zilla help
+usage: zilla <command> [ <args> ]
+
+Commands are:
+    help      Display help information
+    metrics   Show engine metrics
+    start     Start engine
+    stop      Stop engine
+
+See 'zilla help <command>' for more information on a specific command.
+```
+
 `brew upgrade zilla`
 
 #### Expected Output
