@@ -24,7 +24,7 @@ class Zilla < Formula
   url "https://raw.githubusercontent.com/aklivity/zilla/#{version}/cloud/docker-image/src/main/docker/zpm.json.template"
 
   depends_on "wget"
-  depends_on "openjdk@21"
+  depends_on "openjdk@22"
 
   def install
     system "wget", "https://maven.packages.aklivity.io/io/aklivity/zilla/manager/#{version}/manager-#{version}.jar"
