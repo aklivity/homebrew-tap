@@ -19,22 +19,20 @@ class Zillabase < Formula
   homepage "https://github.com/aklivity/zillabase"
   license "Aklivity Community License"
   
-  version "0.0.1"
+  version "0.1.0"
 
-  url "https://github.com/ankitk-me/zillabase/archive/refs/tags/#{version}.tar.gz"
+  url "https://maven.packages.aklivity.io/io/aklivity/zillabase/cli/0.1.0/cli-#{version}.jar"
 
   depends_on "openjdk@22"
 
   def install
     ENV["JAVA_HOME"] = Language::Java.java_home("22")
-
-    system "./mvnw", "clean", "install", "--projects", "cli", "-DskipTests"
     
-    libexec.install "cli/target/cli-develop-SNAPSHOT.jar"
+    libexec.install "cli-#{version}.jar"
 
     (bin/"zillabase").write <<~EOS
       #!/bin/bash
-      exec java -jar "#{libexec}/cli-develop-SNAPSHOT.jar" "$@"
+      exec java -jar "#{libexec}/cli-#{version}.jar" "$@"
     EOS
 
     chmod "+x", bin/"zillabase"
