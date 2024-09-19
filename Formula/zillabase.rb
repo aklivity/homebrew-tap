@@ -23,10 +23,10 @@ class Zillabase < Formula
 
   url "https://maven.packages.aklivity.io/io/aklivity/zillabase/cli/0.1.0/cli-#{version}.jar"
 
-  depends_on "openjdk@22"
+  depends_on "openjdk@21"
 
   def install
-    ENV["JAVA_HOME"] = Language::Java.java_home("22")
+    ENV["JAVA_HOME"] = Language::Java.java_home("21")
     
     libexec.install "cli-#{version}.jar"
 
