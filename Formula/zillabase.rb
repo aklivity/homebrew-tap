@@ -21,12 +21,15 @@ class Zillabase < Formula
   
   version "0.1.0"
 
-  url "https://maven.packages.aklivity.io/io/aklivity/zillabase/cli/0.1.0/cli-#{version}.jar"
+  url "https://github.com/aklivity/zillabase"
 
   depends_on "openjdk@21"
+  depends_on "wget"
 
   def install
     ENV["JAVA_HOME"] = Language::Java.java_home("21")
+
+    system "wget", "https://maven.packages.aklivity.io/io/aklivity/zillabase/cli/#{version}/cli-#{version}.jar"
     
     libexec.install "cli-#{version}.jar"
 
