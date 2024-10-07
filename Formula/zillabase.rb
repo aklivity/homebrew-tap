@@ -19,7 +19,7 @@ class Zillabase < Formula
   homepage "https://github.com/aklivity/zillabase"
   license "Aklivity Community License"
   
-  version "0.2.0"
+  version "0.3.0"
 
   url "https://github.com/aklivity/zillabase"
 
