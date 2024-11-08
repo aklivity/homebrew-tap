@@ -19,7 +19,7 @@ class Zilla < Formula
   homepage "https://github.com/aklivity/zilla"
   license "Aklivity Community License"
 
-  version "0.9.100"
+  version "0.9.101"
 
   url "https://raw.githubusercontent.com/aklivity/zilla/#{version}/cloud/docker-image/src/main/docker/zpm.json.template"
 
@@ -36,7 +36,7 @@ class Zilla < Formula
 
     system "java", "-jar", "manager-#{version}.jar", "wrap"
 
-    system "./zpmw", "install", "--debug"
+    system "./zpmw", "install", "--debug", "--instrument"
 
     libexec.install Dir["zilla"] + [".zpm"]
     bin.install_symlink libexec/"zilla"
