@@ -19,7 +19,7 @@ class Zilla < Formula
   homepage "https://github.com/aklivity/zilla"
   license "Aklivity Community License"
 
-  version "0.9.134"
+  version "0.9.135"
 
   url "https://raw.githubusercontent.com/aklivity/zilla/#{version}/cloud/docker-image/src/main/docker/zpm.json.template"
 
